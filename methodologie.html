@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Méthodologie - Étude PFE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1a2f3f; line-height: 1.6; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+    .navbar {
+      position: sticky; top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(30, 92, 139, 0.15);
+      z-index: 1000; padding: 0.9rem 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.3px;
+      color: #0b3b55;
+    }
+    .logo span {
+      background: linear-gradient(135deg, #1c6c9c, #0f4c6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 550;
+      color: #2c3e50;
+      transition: 0.2s;
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1e6f9f;
+      transition: 0.2s;
+    }
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 2rem 0 1.5rem;
+      color: #0a3a52;
+      border-left: 5px solid #1e7aa8;
+      padding-left: 1.2rem;
+    }
+    .method-step {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.8rem;
+      margin: 1.5rem 0;
+      border: 1px solid #e0eaf3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      transition: all 0.2s;
+    }
+    .method-step:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+      border-color: #bed5e8;
+    }
+    .step-icon {
+      font-size: 2rem;
+      color: #1e6f9f;
+      margin-bottom: 1rem;
+    }
+    .badge-method {
+      background: #eef3fc;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+    footer {
+      background: #f1f7fd;
+      padding: 2.8rem 0;
+      text-align: center;
+      color: #4a627a;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+      border-top: 1px solid #e2ebf3;
+    }
+    @media (max-width: 780px) {
+      .nav-inner { flex-direction: column; align-items: flex-start; }
+      .section-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">UPSAT <span>• PFE Anesthésie-Réa</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="theorique.html">Partie théorique</a></li>
+      <li><a href="methodologie.html" style="color:#1c6c9c; font-weight:600;">Méthodologie</a></li>
+      <li><a href="resultats.html">Résultats</a></li>
+      <li><a href="discussion.html">Discussion</a></li>
+      <li><a href="conclusion.html">Conclusion & recos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+  <h1 class="section-title">🔬 Méthodologie de l'étude</h1>
+
+  <div class="method-step">
+    <div class="step-icon"><i class="fas fa-question-circle"></i></div>
+    <div class="badge-method">Objectif principal</div>
+    <h2 style="margin-bottom: 0.5rem;">Évaluer les connaissances, attitudes et pratiques (CAP) des soignants</h2>
+    <p>En anesthésie-réanimation tunisienne concernant la prise en charge des patients toxicomanes.</p>
+  </div>
+
+  <div class="method-step">
+    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+    <div class="badge-method">Type d'étude</div>
+    <h2>Étude transversale descriptive et analytique</h2>
+    <p>Période : janvier 2025 – juin 2025 (6 mois). Recueil prospectif par questionnaire auto-administré anonyme.</p>
+  </div>
+
+  <div class="method-step">
+    <div class="step-icon"><i class="fas fa-hospital"></i></div>
+    <div class="badge-method">Population & sites</div>
+    <h2>4 centres hospitalo-universitaires de Tunis</h2>
+    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+      <li><strong>Hôpital Razi</strong> (psychiatrie et urgences)</li>
+      <li><strong>Hôpital La Rabta</strong> (médecine interne, réa polyvalente)</li>
+      <li><strong>Hôpital Charles Nicolle</strong> (anesthésie-chirurgie)</li>
+      <li><strong>Centre d'Addictologie et de Médecine d'Urgence (CAMU)</strong></li>
+    </ul>
+    <p><strong>Critères inclusion :</strong> Personnel médical (anesthésistes, réanimateurs, urgentistes, internes) et paramédical (IDE, aides-soignants) exerçant depuis ≥ 6 mois, acceptant de participer.</p>
+  </div>
+
+  <div class="method-step">
+    <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+    <div class="badge-method">Outil de collecte</div>
+    <h2>Questionnaire structuré en 4 sections</h2>
+    <ul style="margin-left: 1.5rem;">
+      <li><strong>Section A :</strong> caractéristiques sociodémographiques & professionnelles (âge, sexe, ancienneté, spécialité)</li>
+      <li><strong>Section B :</strong> connaissances théoriques (définition OMS, classification, échelles de sevrage)</li>
+      <li><strong>Section C :</strong> attitudes (stigmatisation, empathie, perception de dangerosité)</li>
+      <li><strong>Section D :</strong> pratiques déclarées (prescription de substitution, gestion de la douleur, recours au psychologue)</li>
+    </ul>
+    <p>Échelle de Likert 5 points. Pré-test réalisé sur 8 professionnels (validité de contenu).</p>
+  </div>
+
+  <div class="method-step">
+    <div class="step-icon"><i class="fas fa-calculator"></i></div>
+    <div class="badge-method">Analyses statistiques</div>
+    <p>Logiciel SPSS v26. Tests : Chi2 / Fisher pour variables catégorielles, Student / ANOVA pour comparaisons de moyennes. Seuil significativité p < 0.05. Analyse descriptive + régression logistique binaire pour déterminer facteurs associés à un "score de pratique élevé".</p>
+  </div>
+
+  <div class="method-step">
+    <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+    <div class="badge-method">Considérations éthiques</div>
+    <p>Anonymat garanti, consentement éclairé recueilli en ligne/physique. Avis favorable du comité d'éthique de l'UPSAT (n° 12/2025). Données confidentielles, stockées sur serveur sécurisé.</p>
+  </div>
+
+  <div class="highlight" style="background:#eaf4fb; padding:1.2rem; border-radius: 1rem; margin: 2rem 0;">
+    <i class="fas fa-chart-pie"></i> <strong>Taille d'échantillon :</strong> 60 répondants (marge d'erreur ± 5%, puissance 80%).
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Chargui Chaima & Feguiri Chaima – Encadrement Dr Amira Ben Jazia | UPSAT</p>
+  </div>
+</footer>
+</body>
+</html>

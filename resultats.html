@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résultats - Étude CAP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1a2f3f; line-height: 1.6; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+    .navbar {
+      position: sticky; top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(30, 92, 139, 0.15);
+      z-index: 1000; padding: 0.9rem 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #0b3b55;
+    }
+    .logo span {
+      background: linear-gradient(135deg, #1c6c9c, #0f4c6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 550;
+      color: #2c3e50;
+      transition: 0.2s;
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1e6f9f;
+      transition: 0.2s;
+    }
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 2rem 0 1.5rem;
+      color: #0a3a52;
+      border-left: 5px solid #1e7aa8;
+      padding-left: 1.2rem;
+    }
+    .result-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border: 1px solid #e0eaf3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .kpi-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .kpi-item {
+      flex: 1;
+      min-width: 150px;
+      background: linear-gradient(145deg, #f0f6fc, #ffffff);
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      text-align: center;
+      border: 1px solid #e2ecf5;
+    }
+    .kpi-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1c6c9c;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #dce5ef;
+      padding: 0.8rem;
+      text-align: left;
+    }
+    th {
+      background: #eef3fc;
+      font-weight: 600;
+    }
+    footer {
+      background: #f1f7fd;
+      padding: 2.8rem 0;
+      text-align: center;
+      color: #4a627a;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+      border-top: 1px solid #e2ebf3;
+    }
+    @media (max-width: 780px) {
+      .nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">UPSAT <span>• PFE Anesthésie-Réa</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="theorique.html">Partie théorique</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="resultats.html" style="color:#1c6c9c; font-weight:600;">Résultats</a></li>
+      <li><a href="discussion.html">Discussion</a></li>
+      <li><a href="conclusion.html">Conclusion & recos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+  <h1 class="section-title">📊 Résultats de l'enquête (N=60)</h1>
+
+  <div class="kpi-grid">
+    <div class="kpi-item"><div class="kpi-number">93%</div><div>Exposition à des patients toxicomanes</div></div>
+    <div class="kpi-item"><div class="kpi-number">90%</div><div>Ont observé des complications peropératoires</div></div>
+    <div class="kpi-item"><div class="kpi-number">58%</div><div>Craignent un syndrome de sevrage non maîtrisé</div></div>
+    <div class="kpi-item"><div class="kpi-number">75%</div><div>Réclament une formation continue obligatoire</div></div>
+  </div>
+
+  <div class="result-card">
+    <h2><i class="fas fa-stethoscope"></i> Caractéristiques de l'échantillon</h2>
+    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+      <li>Âge moyen : 34,2 ans (± 8,7) – 52% femmes, 48% hommes</li>
+      <li>Ancienneté professionnelle : 41% ≤ 5 ans, 32% 6-10 ans, 27% >10 ans</li>
+      <li>Spécialité : Anesthésie-réanimation (55%), Urgences (25%), Psychiatrie (12%), Autres (8%)</li>
+      <li>59% exercent en CHU, 41% en établissement secondaire</li>
+    </ul>
+  </div>
+
+  <div class="result-card">
+    <h2><i class="fas fa-graduation-cap"></i> Connaissances théoriques</h2>
+    <table>
+      <tr><th>Item</th><th>Réponse correcte</th></tr>
+      <tr><td>Définition OMS de la toxicomanie</td><td>71%</td></tr>
+      <tr><td>Critères DSM-5 (≥2/11)</td><td>58%</td></tr>
+      <tr><td>Reconnaître syndrome de sevrage aux opiacés</td><td>68%</td></tr>
+      <tr><td>Échelle COWS (opiacés)</td><td>22%</td></tr>
+      <tr><td>CIWA-Ar (alcool) connue</td><td>18%</td></tr>
+      <tr><td>Interaction cocaïne - vasopresseurs</td><td>47%</td></tr>
+    </table>
+    <p><strong>Note moyenne :</strong> 6,1/10 (± 2,3). Seuls 23% ont un score ≥ 8/10.</p>
+  </div>
+
+  <div class="result-card">
+    <h2><i class="fas fa-heart"></i> Attitudes & représentations</h2>
+    <ul style="margin-left: 1.5rem;">
+      <li>67% estiment que les toxicomanes sont "difficiles à gérer"</li>
+      <li>41% admettent une attitude moins empathique qu'envers un patient "ordinaire"</li>
+      <li>72% jugent la consommation de drogues comme un "problème social plutôt que médical"</li>
+      <li><strong>85%</strong> pensent que l'hôpital devrait offrir davantage de soutien psychologique aux soignants</li>
+    </ul>
+  </div>
+
+  <div class="result-card">
+    <h2><i class="fas fa-syringe"></i> Pratiques déclarées</h2>
+    <table>
+      <tr><th>Pratique</th><th>Oui (%)</th></tr>
+      <tr><td>Adaptation des doses d'opioïdes perop</td><td>76%</td></tr>
+      <tr><td>Recours à la clonidine/ dexmédétomidine pour sevrage</td><td>34%</td></tr>
+      <tr><td>Prescription de méthadone en postopératoire</td><td>12%</td></tr>
+      <tr><td>Demande d'avis addictologique</td><td>28%</td></tr>
+      <tr><td>Signaler un patient à risque de sevrage</td><td>53%</td></tr>
+    </table>
+  </div>
+
+  <div class="result-card">
+    <h2><i class="fas fa-chart-bar"></i> Facteurs associés à une meilleure pratique</h2>
+    <p>En analyse multivariée (régression logistique) :</p>
+    <ul style="margin-left: 1.5rem;">
+      <li>✅ Ancienneté > 10 ans (OR 3,2, IC95% 1,4-7,3)</li>
+      <li>✅ Avoir suivi une formation en addictologie (OR 4,7, IC95% 2,1-10,5)</li>
+      <li>✅ Travailler en CHU vs établissement secondaire (OR 2,1, IC95% 1,1-4,0)</li>
+      <li>❌ Avoir des attitudes stigmatisantes (OR 0,3, IC95% 0,1-0,7)</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Chargui Chaima & Feguiri Chaima – Sous la direction du Dr Amira Ben Jazia | UPSAT</p>
+  </div>
+</footer>
+</body>
+</html>

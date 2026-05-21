@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussion - PFE Anesthésie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1a2f3f; line-height: 1.6; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+    .navbar {
+      position: sticky; top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(30, 92, 139, 0.15);
+      z-index: 1000; padding: 0.9rem 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #0b3b55;
+    }
+    .logo span {
+      background: linear-gradient(135deg, #1c6c9c, #0f4c6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 550;
+      color: #2c3e50;
+      transition: 0.2s;
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1e6f9f;
+      transition: 0.2s;
+    }
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 2rem 0 1.5rem;
+      color: #0a3a52;
+      border-left: 5px solid #1e7aa8;
+      padding-left: 1.2rem;
+    }
+    .discussion-card {
+      background: #f9fbfe;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border: 1px solid #eef2f8;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #dce5ef;
+      padding: 0.8rem;
+    }
+    .comparison-table th {
+      background: #eef3fc;
+    }
+    footer {
+      background: #f1f7fd;
+      padding: 2.8rem 0;
+      text-align: center;
+      color: #4a627a;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+      border-top: 1px solid #e2ebf3;
+    }
+    @media (max-width: 780px) {
+      .nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">UPSAT <span>• PFE Anesthésie-Réa</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="theorique.html">Partie théorique</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="resultats.html">Résultats</a></li>
+      <li><a href="discussion.html" style="color:#1c6c9c; font-weight:600;">Discussion</a></li>
+      <li><a href="conclusion.html">Conclusion & recos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+  <h1 class="section-title">💬 Discussion</h1>
+
+  <div class="discussion-card">
+    <h2><i class="fas fa-chart-line"></i> Interprétation des principaux résultats</h2>
+    <p>Notre étude met en évidence un <strong>déficit majeur de connaissances</strong> concernant les échelles de sevrage validées (COWS, CIWA-Ar) et la prise en charge addictologique spécifique, malgré une exposition quasi-systématique (93%) aux patients toxicomanes. Ce paradoxe souligne l'urgence de formations ciblées dès le cursus initial et en formation continue obligatoire.</p>
+    <p>Les attitudes stigmatisantes (67% de jugement de "difficulté") constituent un frein à l'empathie thérapeutique, en accord avec la littérature internationale (van Boekel et al., 2013). La stigmatisation diminue l'observance aux soins et majore le risque de rupture de suivi.</p>
+  </div>
+
+  <div class="discussion-card">
+    <h2><i class="fas fa-balance-scale"></i> Comparaison avec la littérature</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Étude</th><th>Constat principal</th><th>Notre étude</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Kintz et al. (2020, France)</td><td>26% des IADE connaissent les équivalences opioïdes</td><td>22% connaissent l'échelle COWS → concordance</td></tr>
+        <tr><td>Vickers & Jolly (2019, UK)</td><td>81% des réanimateurs se sentent mal formés</td><td>75% réclament formation obligatoire → convergence</td></tr>
+        <tr><td>Ben Ayed et al. (2022, Tunisie)</td><td>Stigmatisation élevée en milieu psychiatrique (73%)</td><td>67% attitude "difficile" → stigmate transposable</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="discussion-card">
+    <h2><i class="fas fa-street-view"></i> Forces et limites de l'étude</h2>
+    <p><strong>Forces :</strong> Premier travail tunisien évaluant simultanément connaissances/attitudes/pratiques en anesthésie-réanimation. Multicentrique, incluant des paramédicaux souvent exclus. Questionnaire validé et fiable (α de Cronbach 0,81).</p>
+    <p><strong>Limites :</strong> Échantillon modeste (N=60) limitant la puissance statistique pour sous-groupes. Biais de désirabilité sociale possible. Absence de données sur l'impact réel des pratiques sur la morbidité postopératoire.</p>
+  </div>
+
+  <div class="discussion-card">
+    <h2><i class="fas fa-globe"></i> Perspectives internationales</h2>
+    <p>L'OMS recommande l'intégration des troubles addictifs dans les <strong>curriculums de base</strong> des professions de santé (Global Action Plan 2021-2025). Des exemples probants existent : programme <em>Addiction Medicine Fellowship</em> aux États-Unis, modules obligatoires en Suisse et au Canada. La France impose depuis 2020 une formation à l'addictologie pour les DES d'anesthésie.</p>
+  </div>
+
+  <div class="discussion-card">
+    <h2><i class="fas fa-microphone"></i> Implications pour la pratique clinique</h2>
+    <ul style="margin-left: 1.5rem;">
+      <li>✅ Systématiser l'<strong>interrogatoire sur les consommations toxiques</strong> en pré-anesthésie (respect et non‑jugement)</li>
+      <li>✅ Créer des <strong>protocoles locaux</strong> pour la gestion du sevrage (doses, échelles, recours à l'addictologue)</li>
+      <li>✅ Déstigmatiser par des <strong>formations interactives</strong> (jeux de rôles, témoignages patients)</li>
+      <li>✅ Renforcer le rôle de l'<strong>infirmier référent en addictologie</strong> au bloc et en réanimation</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Chargui Chaima & Feguiri Chaima – Sous la direction du Dr Amira Ben Jazia | UPSAT</p>
+  </div>
+</footer>
+</body>
+</html>
