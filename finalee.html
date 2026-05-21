@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PFE Anesthésie-Réanimation | Toxicomanie & Soins intensifs</title>
+  <!-- Google Fonts + simple reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a2f3f;
+      line-height: 1.5;
+    }
+
+    /* container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ========== NAVIGATION STICKY & CREATIVE ========== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(30, 92, 139, 0.15);
+      z-index: 1000;
+      padding: 0.9rem 0;
+      transition: all 0.2s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.3px;
+      color: #0b3b55;
+    }
+    .logo span {
+      background: linear-gradient(135deg, #1c6c9c, #0f4c6e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 550;
+      color: #2c3e50;
+      transition: 0.2s;
+      font-size: 0.95rem;
+      letter-spacing: -0.2px;
+      position: relative;
+    }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #1e6f9f;
+      transition: 0.2s;
+    }
+    .nav-links a:hover:after, .nav-links a.active:after {
+      width: 100%;
+    }
+    .nav-links a.active {
+      color: #1c6c9c;
+      font-weight: 600;
+    }
+
+    /* hero sections */
+    .hero {
+      padding: 5rem 0 4rem;
+      background: linear-gradient(112deg, #f8fcff 0%, #ffffff 70%);
+      border-bottom: 1px solid #eef3fa;
+    }
+    .hero h1 {
+      font-size: 2.7rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #0a2e44;
+      max-width: 950px;
+    }
+    .badge-sup {
+      background: #e9f2f9;
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #0a3a52;
+      border-left: 5px solid #1e7aa8;
+      padding-left: 1.2rem;
+      letter-spacing: -0.3px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .stat-card {
+      background: #f9fbfe;
+      border-radius: 2rem;
+      padding: 1.5rem 1.5rem;
+      transition: all 0.25s ease;
+      border: 1px solid #eef2f8;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: #cde3f0;
+      box-shadow: 0 12px 20px -12px rgba(0,0,0,0.08);
+    }
+    .kpi-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .kpi {
+      background: linear-gradient(145deg, #f0f6fc, #ffffff);
+      border-radius: 2rem;
+      padding: 1.3rem 1.5rem;
+      flex: 1 1 180px;
+      text-align: center;
+      border: 1px solid #e5ecf3;
+    }
+    .kpi-value {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1a668f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      margin: 1.8rem 0;
+    }
+    th, td {
+      border: 1px solid #e2e9f0;
+      padding: 0.9rem 1.2rem;
+      text-align: left;
+    }
+    th {
+      background: #eef3fc;
+      font-weight: 600;
+    }
+    .btn-pdf {
+      background: #1a5e84;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      transition: 0.2s;
+      margin-top: 1.2rem;
+    }
+    .btn-pdf:hover {
+      background: #0f4766;
+      transform: translateY(-2px);
+    }
+    footer {
+      background: #f1f7fd;
+      padding: 2.8rem 0;
+      text-align: center;
+      color: #4a627a;
+      font-size: 0.85rem;
+      border-top: 1px solid #e2ebf3;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #1e6f9f;
+      width: 44px;
+      height: 44px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.2s;
+      z-index: 99;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .citation-block {
+      background: #f0f6fd;
+      border-left: 5px solid #2c8ebb;
+      padding: 1.2rem 1.8rem;
+      margin: 1.5rem 0;
+      border-radius: 1rem;
+    }
+    @media (max-width: 780px) {
+      .nav-inner { flex-direction: column; align-items: flex-start; }
+      .hero h1 { font-size: 1.9rem; }
+      .section-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">UPSAT <span>• PFE Anesthésie-Réa</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="theorique.html">Partie théorique</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="resultats.html">Résultats</a></li>
+      <li><a href="discussion.html">Discussion</a></li>
+      <li><a href="conclusion.html">Conclusion & recos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <!-- ACCUEIL - page principale -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge-sup">🔬 PFE 2025-2026 | Encadrée par Dr Amira Ben Jazia</div>
+      <h1>Connaissances, attitudes et pratiques des professionnels de santé face à la prise en charge des patients toxicomanes en anesthésie-réanimation (Tunisie)</h1>
+      <p style="font-size:1.1rem; margin: 1.2rem 0 0.6rem; color: #2c5e7e;"><strong>Chargui Chaima</strong> & <strong>Feguiri Chaima</strong> – Licence Nationale en Anesthésie Réanimation</p>
+      <p>UPSAT – Faculté Privée des Sciences de la Santé de Tunis | Agrément N° 05/2010</p>
+      <div class="citation-block" style="margin-top: 2rem;">
+        <i class="fas fa-globe" style="margin-right: 10px; color:#1e6f9f;"></i> 284 millions de consommateurs de drogues dans le monde (UNODC). En réanimation et au bloc opératoire, tolérance, sevrage et stigmatisation compliquent les soins. Cette étude évaluative (N=60) révèle des besoins urgents de formation et de protocoles.
+      </div>
+      <div class="card-grid">
+        <div class="stat-card"><i class="fas fa-brain" style="font-size: 1.8rem; color:#1c6c9c;"></i><br><strong>📘 Partie théorique</strong><br>Définitions OMS/DSM-5, mécanismes neurobiologiques, classifications et implications anesthésiques.</div>
+        <div class="stat-card"><i class="fas fa-flask" style="font-size: 1.8rem; color:#1c6c9c;"></i><br><strong>🔬 Méthodologie</strong><br>Étude transversale, 4 hôpitaux (CAMU, Razi, INN, La Rabta), questionnaire validé + échelle de Likert.</div>
+        <div class="stat-card"><i class="fas fa-chart-line" style="font-size: 1.8rem; color:#1c6c9c;"></i><br><strong>📊 Résultats marquants</strong><br>93% d’exposition, 90% de complications, 58% craignent le sevrage, 75% réclament formation continue.</div>
+        <div class="stat-card"><i class="fas fa-hand-holding-heart" style="font-size: 1.8rem; color:#1c6c9c;"></i><br><strong>💡 Recommandations clés</strong><br>Formation obligatoire, protocoles inter-services, lutte contre la stigmatisation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aperçu des pages avec navigation fluide -->
+  <section style="padding: 2rem 0 4rem;">
+    <div class="container">
+      <h2 class="section-title">Explorer le projet complet</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
+        <a href="theorique.html" style="flex:1; background:#f8fafd; border-radius: 2rem; padding: 1.2rem; text-decoration: none; color: #1a2f3f; border:1px solid #e2ebf3; text-align:center; transition:0.2s;"><i class="fas fa-book-open"></i> Partie théorique</a>
+        <a href="methodologie.html" style="flex:1; background:#f8fafd; border-radius: 2rem; padding: 1.2rem; text-decoration: none; color: #1a2f3f; border:1px solid #e2ebf3; text-align:center;"><i class="fas fa-microscope"></i> Méthodologie</a>
+        <a href="resultats.html" style="flex:1; background:#f8fafd; border-radius: 2rem; padding: 1.2rem; text-decoration: none; color: #1a2f3f; border:1px solid #e2ebf3; text-align:center;"><i class="fas fa-chart-simple"></i> Résultats</a>
+        <a href="discussion.html" style="flex:1; background:#f8fafd; border-radius: 2rem; padding: 1.2rem; text-decoration: none; color: #1a2f3f; border:1px solid #e2ebf3; text-align:center;"><i class="fas fa-comments"></i> Discussion</a>
+        <a href="conclusion.html" style="flex:1; background:#f8fafd; border-radius: 2rem; padding: 1.2rem; text-decoration: none; color: #1a2f3f; border:1px solid #e2ebf3; text-align:center;"><i class="fas fa-clipboard-list"></i> Conclusion & recos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Chargui Chaima & Feguiri Chaima – UPSAT, Licence Anesthésie Réanimation. <br> Direction : Dr Amira Ben Jazia | Tous droits réservés – données issues du PFE original 2025-2026.</p>
+  </div>
+</footer>
+<a href="#" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
+
+<script>
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) backBtn.classList.add('visible');
+    else backBtn.classList.remove('visible');
+  });
+  backBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
